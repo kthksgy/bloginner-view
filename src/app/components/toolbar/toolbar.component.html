@@ -1,0 +1,18 @@
+<div class="toolbar-area"></div>
+<mat-toolbar class="toolbar" color="primary">
+  <a routerLink="/" class="toolbar-title">{{title}}</a>
+  <span class="toolbar-spacer"></span>
+  <mat-form-field appearance="outline">
+    <mat-label>検索</mat-label>
+    <input matInput #keywordInput placeholder="キーワード" name="keyword" (keyup.enter)="search(keywordInput.value)">
+    <mat-icon matPrefix>search</mat-icon>
+    <!-- <mat-hint>Hint</mat-hint> -->
+  </mat-form-field>
+  <!-- <button mat-icon-button class="toolbar-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="toolbar-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button> -->
+  
+</mat-toolbar>

@@ -1,0 +1,26 @@
+.toolbar, .toolbar-area {
+    height: 50px;
+}
+
+.toolbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2147483647;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+mat-form-field.mat-form-field {
+    font-size: 11px;
+    height: 45px;
+    width: 200px;
+}
+
+.toolbar-title {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}

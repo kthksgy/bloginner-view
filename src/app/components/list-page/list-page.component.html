@@ -1,0 +1,21 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+  <mat-card class="article-card" *ngFor="let article of articles">
+    <img *ngIf="article.thumbnail !== ''" mat-card-image [src]="article.thumbnail" alt="{{article.title}}" class="thumbnail">
+    <div *ngIf="article.thumbnail === ''" class="thumbnail">
+      <mat-icon class="thumbnail-not-found">image_not_supported</mat-icon>
+    </div>
+    <mat-card-header>
+      <mat-card-title>{{article.title}}</mat-card-title>
+      <mat-card-subtitle>{{article.username}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{article.overview}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="readMore(article.id)">続きを読む</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="page($event)">
+</mat-paginator>

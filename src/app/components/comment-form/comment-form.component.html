@@ -1,0 +1,19 @@
+<div class="container">
+  <form [formGroup]="commentForm" (ngSubmit)="submit()">
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="formField">
+        <mat-label>コメント</mat-label>
+        <textarea class="comment-form-content" matInput formControlName="content"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="formField">
+        <mat-label>ハンドルネーム</mat-label>
+        <input type="text" matInput formControlName="handlename">
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!commentForm.valid">コメントする</button>
+    </div>
+  </form>
+</div>

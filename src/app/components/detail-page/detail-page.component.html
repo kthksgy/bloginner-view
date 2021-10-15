@@ -1,0 +1,49 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+  <div class="container-content">
+    <div class="title">
+      {{article.title}}
+    </div>
+    <div class="username">
+      written by {{article.username}}
+    </div>
+    <p class="article-content">{{article.content}}</p>
+  <ng-container *ngFor="let comment of comments.slice().reverse()">
+    <div *ngIf="comment.isPublished" class="comment-area">
+      <p class="comment-content">{{comment.content}}</p>
+      <p class="comment-handlename">commented by {{comment.handlename}} ({{comment.createdAt}})</p>
+    </div>
+    <div *ngIf="!comment.isPublished" class="comment-area">
+      <p>このコメントは承認待ちです。</p>
+    </div>
+  </ng-container>
+  <div class="comment-form">
+    <app-comment-form [articleId]="id" (onSubmit)="onCommentSubmission()"></app-comment-form>
+  </div>
+  
+  </div>
+  
+  <!-- <mat-card class="article-card">
+  <mat-card-header>
+    <mat-card-title>{{article.title}}</mat-card-title>
+    <mat-card-subtitle>written by {{article.username}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="article-content">{{article.content}}</p>
+    <mat-divider></mat-divider>
+    <ng-container *ngFor="let comment of comments.slice().reverse()">
+      <div *ngIf="comment.isPublished" class="comment-area">
+        <p class="comment-content">{{comment.content}}</p>
+        <p class="comment-handlename">commented by {{comment.handlename}} ({{comment.createdAt}})</p>
+      </div>
+      <div *ngIf="!comment.isPublished" class="comment-area">
+        <p>このコメントは承認待ちです。</p>
+      </div>
+      <mat-divider></mat-divider>
+    </ng-container>
+  </mat-card-content>
+  <mat-card-actions>
+    <app-comment-form [articleId]="id" (onSubmit)="onCommentSubmission()"></app-comment-form>
+  </mat-card-actions>
+</mat-card> -->
+</div>

@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+mat-card {
+    margin: 20px;
+    width: 300px;
+    border-radius: 15px 15px 10px 10px;
+    /* max-width: 300px; */
+}
+
+.thumbnail {
+    /* text-align: center; */
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumbnail-not-found {
+    font-size: 70px;
+    width: 1em;
+    height: 1em;
+}
+
+mat-card-header {
+    height: 75px;
+}
+mat-card-content {
+    height: 100px;
+}
+
+mat-card-actions {
+    text-align: right;
+    vertical-align: text-bottom;
+}

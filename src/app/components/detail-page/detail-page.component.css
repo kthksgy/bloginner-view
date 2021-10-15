@@ -1,0 +1,54 @@
+.container {
+    
+    /* width: 80vw; */
+    /* text-align: center; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container-content {
+    box-shadow: 0px 0px 5px;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: 35px;
+    margin: 25px 50px 25px 25px;
+}
+
+.username {
+    font-size: 20px;
+    margin: 25px 5px 25px 50px;
+}
+
+p {
+    white-space: pre-wrap;
+}
+
+.article-content {
+    font-size: 17px;
+    margin: 25px 5px 25px 50px;
+}
+
+.comment-area {
+    margin: 10px 50px 5px 50px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px;
+}
+
+.comment-content {
+    font-size: 15px;
+}
+
+.comment-handlename {
+    font-size: 15px;
+}
+
+.comment-form {
+    margin: 25px 50px 25px 50px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px;
+}
